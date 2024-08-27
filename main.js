@@ -1,4 +1,4 @@
-// código omitido
+//codigo omitido 
 const numeroSenha = document.querySelector(".parametro-senha__texto");
 const campoSenha = document.querySelector("#campo-senha");
 const letrasMaiusculas = "ABCDEFGHIJKLMNOPQRSTUVXYWZ";
@@ -35,12 +35,12 @@ function geraSenha() {
     }
     campoSenha.value = senha;
 
-    // Calcular e mostrar entropia
+    
     const entropia = tamanhoSenha * Math.log2(alfabeto.length);
     valorEntropia.textContent = "Um computador pode levar até " +
         Math.floor(2 ** entropia / (100e6 * 60 * 60 * 24)) + " dias para descobrir essa senha;";
     
-    // Classificar força da senha
+    
     classificaSenha(entropia);
 }
 
@@ -71,10 +71,10 @@ function classificaSenha(entropia) {
     }
 }
 
-// Associar eventos aos checkboxes
+
 for (let i = 0; i < checkbox.length; i++) {
     checkbox[i].onclick = geraSenha;
 }
 
-// Inicializar senha ao carregar a página
+
 geraSenha();
