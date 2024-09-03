@@ -23,11 +23,11 @@ body {
 
 .titulo-secundario {
     font-size: 24px;
-    font-weight: 400;
 }
 
 .conteudo-titulo {
     text-align: center;
+    margin-top: 80px;
 }
 
 * {
@@ -48,6 +48,10 @@ body {
     font-family: var(--roboto-mono);
     font-size: 40px;
     width: 70%;
+}
+
+#campo-senha:focus{
+    outline: none;
 }
 
 .conteudo {
@@ -73,17 +77,15 @@ body {
 
 .parametro-colunas {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.parametro-coluna {
-    width: 48%;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .parametro-senha {
-    margin-bottom: 20px;
+    width: 50%;
+    margin: 0 auto;
 }
+
 
 .parametro-senha-botoes {
     display: flex;
@@ -104,6 +106,7 @@ body {
     border-top: 2px solid var(--borda);
     border-bottom: 2px solid var(--borda);
     margin: 0;
+    font-size: 24px;
 }
 
 label {
@@ -122,37 +125,35 @@ label {
     width: 100%;
 }
 
-.parametro-senha-textos {
-    display: flex;
-    justify-content: space-between;
-}
-
 .fraca {
-    height: 30px;
     width: 25%;
     background-color: #E71B32;
-    position: relative;
-    bottom: 0; 
+    
 }
 
 .media {
-    height: 30px;
     width: 50%;
     background-color: #FAF408;
-    position: relative;
-    bottom: 0; 
 }
 
 .forte {
-    height: 30px;
     width: 100%;
-    background-color: #00FF85;
-    position: relative;
-    bottom: 0; 
+    background-color: #00FF85; 
 }
 
 .forca {
     height: 30px;
     position: relative;
-    bottom: 0; 
+    bottom: 30px; 
+}
+
+.parametro-senha-textos{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+    .parametro-coluna__senha{
+        flex-direction: row;
+    }
 }
